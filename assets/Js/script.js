@@ -2,7 +2,7 @@ let preguntas = [
   {
     pregunta: "1. La franquicia nació de la mano de Capcom y del desarrollador Shinji Mikami, quien bautizó a la saga en el territorio nipón como Biohazard. Por temas de derechos, en occidente fue rebautizada como Resident Evil. ¿Cómo se escogió el nombre?",
     opcion: ["A.Fue idea de Shinji Mikami y el equipo de desarrollo", "B.La filial de Capcom en Estados Unidos sugirió el nombre", "C.Se decidió mediante un concurso en las oficias de Capcom", "D.Era una de las opciones para nombrar a la franquicia en lugar de Biohazard"],
-    respuesta: 3,
+    respuesta: 1,
   },
   {
     pregunta: "prueba",
@@ -11,6 +11,7 @@ let preguntas = [
   },
 ];
 
+let repetir2=true;
 let index = 0;
 let puntaje = 0;
 let intento = 0;
@@ -25,6 +26,7 @@ let cajatiempo = document.getElementById("cajatiempo");
 let titulopreg = document.getElementById("titulo");
 let opcion = document.querySelectorAll(".opcion");
 let boton = document.getElementById("siguiente");
+let cincuenta = document.getElementById("cincuenta");
 
 function imprimirpreguntas(i) {
   span1.innerHTML = preguntas[i].opcion[0];
@@ -109,3 +111,43 @@ function temporizador(){
 }
 
 temporizador();
+
+cincuenta.addEventListener('click',()=>{
+botoncincuenta();
+
+ 
+});
+
+
+function botoncincuenta(){
+ while(repetir2){
+  span1.dataset.opt;
+ span2.dataset.opt;
+ span3.dataset.opt;
+ span4.dataset.opt;
+ console.log(span1 , span2 , span3 , span4);
+
+
+ if (span1.dataset.opt==preguntas[index].respuesta) {
+   span2.innerHTML = "";
+   span3.innerHTML = "";
+   repetir2 = false;
+ }
+ if (span2.dataset.opt==preguntas[index].respuesta) {
+  span1.innerHTML = "";
+  span4.innerHTML = "";
+  repetir2 = false;
+  
+}
+if (span3.dataset.opt==preguntas[index].respuesta) {
+  span1.innerHTML = "";
+  span2.innerHTML = "";
+  repetir2 = false;
+}
+if (span4.dataset.opt==preguntas[index].respuesta) {
+  span2.innerHTML = "";
+  span3.innerHTML = "";
+  repetir2 = false;
+}
+ }
+}

@@ -34,6 +34,7 @@ let llamada = document.getElementById("llamada");
 let display = document.getElementById("preguntaScreen");
 let display2 = document.getElementById("respuestaScreen");
 let finalizar = document.getElementById("finalizar");
+let preguntastotales = document.getElementById("preguntastotales");
 dinero = 0;
 
 function imprimirpreguntas(i) {
@@ -182,4 +183,6 @@ function mostrarResultado(){
 
   display.style.display = 'none';
   display2.style.display = 'block';
+
+  preguntastotales.innerHTML = intento;
 }

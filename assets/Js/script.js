@@ -10,7 +10,7 @@ let preguntas = [
     respuesta: 2,
   },
 ];
-
+let repetir3 = true;
 let repetir2=true;
 let index = 0;
 let puntaje = 0;
@@ -27,6 +27,8 @@ let titulopreg = document.getElementById("titulo");
 let opcion = document.querySelectorAll(".opcion");
 let boton = document.getElementById("siguiente");
 let cincuenta = document.getElementById("cincuenta");
+let cajadinero = document.getElementById("cajadinero");
+dinero = 0;
 
 function imprimirpreguntas(i) {
   span1.innerHTML = preguntas[i].opcion[0];
@@ -72,11 +74,14 @@ function validar(opcion) {
  
 
  while (repetir) {
+
     if (op1 == preguntas[index].respuesta) {
         alert("esa es la respuesta correcta");
         puntaje++;
+        dinero = dinero + 10000 ; 
         opcion.classList.add('correcto');
         puntos.innerHTML = puntaje;
+        cajadinero.innerHTML = dinero;
         repetir = false;
         console.log(op1);
         break;
@@ -85,9 +90,10 @@ function validar(opcion) {
           mal ++;
           opcion.classList.add('incorrecto');
           repetir = false;
+          alert(`lo sentimos ha seleccionado una respuesta erronea su dinero ganado es de ${dinero} y su puntaje es de ${puntaje}`);
         break;        
       }
-    
+      
       
  }
 

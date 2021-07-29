@@ -31,6 +31,9 @@ let boton = document.getElementById("siguiente");
 let cincuenta = document.getElementById("cincuenta");
 let cajadinero = document.getElementById("cajadinero");
 let llamada = document.getElementById("llamada");
+let display = document.getElementById("preguntaScreen");
+let display2 = document.getElementById("respuestaScreen");
+let finalizar = document.getElementById("finalizar");
 dinero = 0;
 
 function imprimirpreguntas(i) {
@@ -166,3 +169,17 @@ llamada.addEventListener('click',() => {
   while(repetir3)repetir3=false,alert(preguntas[index].tip);
 
 });
+
+
+finalizar.addEventListener('click',() => {
+mostrarResultado();
+});
+
+
+
+
+function mostrarResultado(){
+
+  display.style.display = 'none';
+  display2.style.display = 'block';
+}

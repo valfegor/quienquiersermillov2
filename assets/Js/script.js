@@ -10,6 +10,11 @@ let preguntas = [
     opcion: ["AAA", "bbb", "cc", "dd"],
     respuesta: 2,
   },
+  {
+    pregunta: "prueba",
+    opcion: ["AAA", "bbb", "cc", "dd"],
+    respuesta: 2,
+  },
 ];
 
 let repetir3 = true;
@@ -78,14 +83,15 @@ function siguiente(opcion){
 
 
 function validar(opcion) {
-    intento ++;
+    
 
   op1 = opcion.dataset.opt;
 
+  
  
 
  while (repetir) {
-
+  
     if (op1 == preguntas[index].respuesta) {
         alert("esa es la respuesta correcta");
         puntaje++;
@@ -94,20 +100,32 @@ function validar(opcion) {
         puntos.innerHTML = puntaje;
         cajadinero.innerHTML = dinero;
         repetir = false;
+        intento ++;
+        
         console.log(op1);
         break;
       }
-      else{
-          mal ++;
+      else if(op1 != preguntas[index].respuesta){
+        mal ++;
           opcion.classList.add('incorrecto');
           repetir = false;
+          intento ++;
+          
           alert(`lo sentimos ha seleccionado una respuesta erronea su dinero ganado es de ${dinero} y su puntaje es de ${puntaje}`);
           mostrarResultado();
-        break;        
+        break;
       }
+          
+  
+      }
+      span1.style.display = 'block';
+      span2.style.display = 'block';
+      span3.style.display = 'block';
+      span4.style.display = 'block';
       
       
- }
+      
+ 
 
 }
 
@@ -137,37 +155,50 @@ botoncincuenta();
 });
 
 
-function botoncincuenta(){
+function botoncincuenta(opcion){
  while(repetir2){
   span1.dataset.opt;
  span2.dataset.opt;
  span3.dataset.opt;
  span4.dataset.opt;
- console.log(span1 , span2 , span3 , span4);
-
+ 
+ 
+ 
+ 
+ 
 
  if (span1.dataset.opt==preguntas[index].respuesta) {
-   span2.innerHTML = "";
-   span3.innerHTML = "";
+   span2.style.display = 'none';
+   span3.style.display = 'none';
    repetir2 = false;
+   break;
  }
  if (span2.dataset.opt==preguntas[index].respuesta) {
-  span1.innerHTML = "";
-  span4.innerHTML = "";
+  span1.style.display = 'none';
+  span4.style.display = 'none';
   repetir2 = false;
+  break;
   
 }
 if (span3.dataset.opt==preguntas[index].respuesta) {
-  span1.innerHTML = "";
-  span2.innerHTML = "";
+  span1.style.display = 'none';
+  span2.style.display = 'none';
   repetir2 = false;
+  break;
 }
 if (span4.dataset.opt==preguntas[index].respuesta) {
-  span2.innerHTML = "";
-  span3.innerHTML = "";
+  span2.style.display = 'none';
+  span3.style.display = 'none';
   repetir2 = false;
+  break;
 }
+
+
+
  }
+ alert("Ha usado su comodin mi amigo , ya no podra utilizarlo nuevamente");
+
+ 
 }
 
 llamada.addEventListener('click',() => {

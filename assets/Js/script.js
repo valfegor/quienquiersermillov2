@@ -65,11 +65,17 @@ opcion.forEach(function (opcion) {
 
 boton.onclick = function(){
   siguiente(opcion);
+  
+  
 }
 
 function siguiente(opcion){
   if(index>=(preguntas.length-1 )){
     mostrarResultado();
+  }
+  while(index==0){
+    alert("debe seleccionar una respuesta valida");
+    break;
   }
   index ++;
   repetir = true;

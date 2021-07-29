@@ -59,13 +59,12 @@ opcion.forEach(function (opcion) {
 });
 
 boton.onclick = function(){
-  alert("diste clic");
   siguiente(opcion);
 }
 
 function siguiente(opcion){
   if(index>=(preguntas.length-1 )){
-    alert("acabaste pendeja");
+    mostrarResultado();
   }
   index ++;
   repetir = true;
@@ -124,7 +123,7 @@ function temporizador(){
     cajatiempo.innerHTML = `${min} : ${seg}`
   },1000);
 
-  if(contador==tiempo)clearInterval(timer);
+  if(contador==tiempo)clearInterval(timer),mostrarResultado();;
   
 
 }
@@ -179,7 +178,16 @@ llamada.addEventListener('click',() => {
 
 
 finalizar.addEventListener('click',() => {
-mostrarResultado();
+
+  let seguro = prompt("Esta seguro que desea retirarse?");
+  seguro.toLocaleLowerCase();
+
+  while(seguro=="si"){
+    mostrarResultado();
+  }
+
+  return;
+
 });
 
 

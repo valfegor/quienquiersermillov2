@@ -213,3 +213,19 @@ footer{
     text-transform: capitalize;
 
 }
+
+
+/*
+Resultado*/
+
+.resultado {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 15px;
+    font-size: 20px;
+}
+
+.resultado span {
+    font-weight: 600;
+}

@@ -35,7 +35,12 @@ let display = document.getElementById("preguntaScreen");
 let display2 = document.getElementById("respuestaScreen");
 let finalizar = document.getElementById("finalizar");
 let preguntastotales = document.getElementById("preguntastotales");
-dinero = 0;
+let acumulado = document.getElementById("dinero");
+let correctiyo = document.getElementById("correctiyo");
+let correcto = document.getElementById("right ");
+let wrong = document.getElementById("mal");
+console.log(correcto);
+let dinero = 0;
 
 function imprimirpreguntas(i) {
   span1.innerHTML = preguntas[i].opcion[0];
@@ -98,6 +103,7 @@ function validar(opcion) {
           opcion.classList.add('incorrecto');
           repetir = false;
           alert(`lo sentimos ha seleccionado una respuesta erronea su dinero ganado es de ${dinero} y su puntaje es de ${puntaje}`);
+          mostrarResultado();
         break;        
       }
       
@@ -185,4 +191,9 @@ function mostrarResultado(){
   display2.style.display = 'block';
 
   preguntastotales.innerHTML = intento;
+  acumulado.innerHTML = `Felicidades Obtuviste $${dinero}`;
+  correctiyo.innerHTML = `lo lograste en ${puntaje} intentos sigue asi!`;
+  correcto.innerHTML = `Tuviste un total de ${puntaje} respuestas correctas`;
+  
+
 }

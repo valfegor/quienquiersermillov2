@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../Img/thumb-1920-1057560.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content:center;
+    background-repeat: no-repeat;
+    align-items: center;
+    min-height:100vh;
+}
+
+.contenedor{
+    width:940px;
+    background-color:#fff;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0,0.2);
+    min-height: 350px;
+    padding:80px 90px;
+    border-radius:15px;
+    display:flex;
+}
+
+.ladoizquierdo , .ladoderecho{
+    width:50%;
+}
+
+.ladoizquierdo img {
+    height:300px;
+    width:300px;
+}
+
+.ladoderecho h1{
+    color:red;
+}
+
+.ladoderecho h2 {
+    color:#444;
+    margin: 20px auto 10px;
+    font-size: 25px;
+}
+
+.ladoderecho ul {
+    color: #444;
+    font-size: 18px;
+    margin-top: 5px;
+    font-weight: 600;
+    list-style: circle;
+    list-style-position: inside;
+
+}
+
+
+.ladoderecho a{
+    background-color:red;
+    border-radius: 100px;
+    color:#fff;
+    font-weight: 600;
+    width:100%;
+    display:inline-block;
+    text-align: center;
+    padding:15px 0;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.ladoderecho ul li {
+    margin-top:5px;
+}
+
+
+/*
+Inicio de la pagina de preguntas
+*/
+
+.caja{
+    background-color:#fff;
+    border-radius:10px;
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.2);
+    min-height: 350px;
+    width:640px;
+    padding:50px;
+}
+
+.titulo {
+    border-bottom: 1px solid #464646;
+    color: #464646;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+}
+
+.header{
+    margin-bottom: 30px;
+    display:flex;
+    justify-content:space-between;
+
+}
+
+.cajapuntos , .cajatiempo {
+    border-radius: 100px;
+    padding:10px 15px;
+    border:1px solid #444;
+    color: #444;
+}
+
+.cajapreguntas{
+    background-color: red;
+    color: #fff;
+    border-radius:10px;
+    padding:10px 15px;
+}
+
+.cajaopciones {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 0;
+    grid-gap: 15px;
+}
+
+.cajaopciones span {
+    background-color:#ccc;
+    border-radius:10px;
+    color: #444;
+    border:1px solid #444;
+    padding:10px 15px;
+}
+
+.cajaopciones span.correcto{
+    background-color: green;
+    border-color: #00ab00;
+    color: #fff;
+}
+
+.cajaopciones span.incorrecto{
+    background-color: red;
+    border-color: red;
+    color: #fff;
+}

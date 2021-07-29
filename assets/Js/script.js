@@ -3,7 +3,7 @@ let preguntas = [
     pregunta: "1. La franquicia nació de la mano de Capcom y del desarrollador Shinji Mikami, quien bautizó a la saga en el territorio nipón como Biohazard. Por temas de derechos, en occidente fue rebautizada como Resident Evil. ¿Cómo se escogió el nombre?",
     opcion: ["A.Fue idea de Shinji Mikami y el equipo de desarrollo", "B.La filial de Capcom en Estados Unidos sugirió el nombre", "C.Se decidió mediante un concurso en las oficias de Capcom", "D.Era una de las opciones para nombrar a la franquicia en lugar de Biohazard"],
     respuesta: 1,
-    tip:"No lo se que mierda xD"
+    tip:"No lo se viejo me estoy llamando llama despues"
   },
   {
     pregunta: "prueba",
